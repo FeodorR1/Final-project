@@ -1,0 +1,19 @@
+{% extends 'blog/base.html' %}
+{% block title %}Ihr Wort{% endblock %}
+
+{% block content %}
+{% for i in blog %}
+<div class="container">
+
+    <h3>{{i.title}}</h3>
+
+    <h4><a href="{% url 'change' post_slug=i.slug %}" class="nav-link">(bearbeiten)</a></h4>
+
+    <hr>
+    <br>
+    <h5>{{i.content|linebreaksbr}}</h5>
+
+    <br>
+</div>
+{% endfor %}
+{% endblock %}

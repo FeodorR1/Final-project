@@ -1,0 +1,17 @@
+{% extends 'blog/base.html' %}
+{% block title %}Hauptsite{% endblock %}
+{% block content %}
+<div class="container">
+    <h2>Hauptsite</h2>
+    <hr>
+    <br>
+    {% for i in blog %}
+
+    <div id="mydi" class="alert alert-warning mt-2">
+
+        <h3><a href="{% url 'wort' post_slug=i.slug %}">{{i.title}}</a></h3>
+
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

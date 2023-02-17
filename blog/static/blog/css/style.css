@@ -1,0 +1,15 @@
+body {
+text-align: center;
+text-decoration: solid;
+}
+
+.bobby {
+margin-top: 100px;
+}
+
+#mydi {
+    float: left;
+    width: 30%;
+    margin: 10px;
+    height: 100%;
+}

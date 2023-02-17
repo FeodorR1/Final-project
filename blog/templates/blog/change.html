@@ -1,0 +1,21 @@
+{% extends 'blog/base.html' %}
+{% block title %}bearbeiten{% endblock %}
+{% block content %}
+
+<div class="container">
+    <h3>Seite zum Bearbeiten von Beiträgen</h3>
+    <hr>
+    <br>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.title }}
+        <br>
+        {{ form.content }}
+        <br>
+
+        <button type="submit" class="btn btn-success">bearbeiten</button>
+        <button type="reset" class="btn btn-success">leeren</button>
+    </form>
+</div>
+
+{% endblock %}
